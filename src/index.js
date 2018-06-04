@@ -25,4 +25,4 @@ const ChartsPlugin = (md) => {
 	}
 }
 
-export default ChartsPlugin;
+module.exports = ChartsPlugin;
