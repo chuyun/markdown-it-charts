@@ -1,4 +1,4 @@
-English | [简体中文](./README.zh-CN.md)
+[English](./README.md) | 简体中文
 
 
 
@@ -6,12 +6,13 @@ English | [简体中文](./README.zh-CN.md)
 
 
 
-> Chart plugin for markdown-it. Fast and easy to extend markdown-it.
-> support chart.js、echarts、highcharts、CHARTIST、c3.js、tauCharts.
+> markdown-it 的 JavaScript 图表插件，可以帮助我们更快的扩展 [markdown-it](https://github.com/markdown-it/markdown-it).
+>
+> 目前支持的图表列表：chat.js、echarts、highcharts、CHARTIST、c3.js、taucharts.js.
 
 
 
-## Install
+## 安装
 
 node.js & bower:
 
@@ -22,13 +23,13 @@ bower install markdown-it-charts --save
 
 
 
-## Usage examples
+##  使用
 
 ### chat.js
 
-**node.js**
+**node.js使用示例**
 
-> token.info is **chart**
+> 需要提供token.info 为chart
 
 ```js
 var markdownIt = require("markdown-it");
@@ -69,7 +70,7 @@ md.render(`\`\`\`chart
 \`\`\``);
 ```
 
-**Browser**
+**前端使用示例**
 
 ```js
 <script type="text/javascript"src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
@@ -92,9 +93,9 @@ md.render(`\`\`\`chart
 
 ### echarts
 
-**node.js**
+**node.js使用示例**
 
-> token.info is **echarts**
+> 需要提供token.info 为 **echarts**
 
 ```js
 var markdownIt = require("markdown-it");
@@ -139,7 +140,7 @@ md.render(`\`\`\`echarts
 ```
 
 
-**Browser**
+**前端使用示例**
 
 ```js
 <script type="text/javascript"src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
@@ -164,9 +165,9 @@ md.render(`\`\`\`echarts
 
 ### CHARTIST
 
-**node.js**
+**node.js使用示例**
 
-> token.info is **chartist**
+> 需要提供token.info 为 **chartist**
 
 ```js
 var markdownIt = require("markdown-it");
@@ -195,7 +196,7 @@ md.render(`\`\`\`chartist
 ```
 
 
-**Browser**
+**前端使用示例**
 
 ```js
 <link href="https://cdn.bootcss.com/chartist/0.11.0/chartist.min.css" rel="stylesheet">
@@ -218,11 +219,11 @@ md.render(`\`\`\`chartist
 
 ### c3.js
 
-**node.js**
+**node.js使用示例**
 
-> token.info is **c3**
+> 需要提供token.info 为 **c3**
 >
-> unique id is required
+> 唯一的id字段是必须的
 
 ```javascript
 var markdownIt = require("markdown-it");
@@ -247,12 +248,12 @@ md.render(`\`\`\`c3
 \`\`\``);
 ```
 
-**Browser**
+**前端使用示例**
 
 ```javascript
 <link href="https://cdn.bootcss.com/c3/0.6.1/c3.min.css" rel="stylesheet">
 <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-// c3.js is rely on d3.js
+// c3.js 依赖 d3.js
 <script type="text/javascript" src="https://cdn.bootcss.com/d3/4.13.0/d3.min.js"></script>
 <script type="text/javascript" src="https://cdn.bootcss.com/c3/0.6.1/c3.js"></script>
 <script>
@@ -290,11 +291,11 @@ md.render(`\`\`\`c3
 
 ### tauCharts
 
-**node.js**
+**node.js使用示例**
 
-> token.info is **c3**
-
-> unique id is required
+> 需要提供token.info 为 **c3**
+>
+> 唯一的id字段是必须的
 
 ```javascript
 var markdownIt = require("markdown-it");
@@ -326,15 +327,15 @@ md.render(`\`\`\`taucharts
 \`\`\``);
 ```
 
-**Browser**
+**前端使用示例**
 
 ```javascript
 <link href="https://cdn.bootcss.com/tauCharts/1.2.1/tauCharts.default.min.css" rel="stylesheet">
 <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/d3js/latest/d3.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/taucharts@2/dist/taucharts.min.js"></script>
-// taucharts.js is rely on d3.js
-// But there is an incompatibility issue caused by version D3.js
+// taucharts.js 依赖 d3.js
+// D3.js V4 版本 与 最新版本 taucharts.js 存在部分问题，修复请看taucharts官方文档
 <script>
   $(function(){
         var reg = /^[\'\"]+|[\'\"]+$/g
@@ -357,6 +358,6 @@ md.render(`\`\`\`taucharts
 
 
 
-###  Contributing
+###  欢迎贡献
 
-If you have a bug or an idea,  open issues [here](https://github.com/chuyun/markdown-it-charts/issues)
+有任何建议或意见您可以进行 [提问](https://github.com/chuyun/markdown-it-charts/issues).

@@ -1,48 +1,56 @@
 {
-	"name": "markdown-it-charts",
-	"version": "1.0.2",
-	"main": "index.js",
-	"license": "MIT",
-	"author": {
-		"name": "chuyun",
-		"email": "info_together@aliyun.com"
-  },
-  "bin": {
-    "markdown-it-charts": "bin/markdown-it-charts.js"
-  },
-  "files": [
-    "index.js",
-    "bin/",
-    "src/",
-    "dist/"
-  ],
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/chuyun/markdown-it-charts.git"
-  },
-  "bugs": {
-    "url": "https://github.com/tylingsoft/markdown-it-chart/issues"
-  },
-  "homepage": "https://github.com/chuyun/markdown-it-charts",
-  "description": "chart plugin for markdown-it.",
-	"keywords": [],
-	"dependencies": {},
-	"devDependencies": {
-		"assert": "^1.4.1",
-		"babel-core": "^6.26.3",
-		"babel-loader": "^7.1.4",
-		"babel-preset-env": "^1.7.0",
-		"markdown-it": "^8.4.1",
-		"webpack": "^4.10.2",
-		"webpack-cli": "^3.0.1",
-		"webpack-node-externals": "^1.7.2",
-		"yarn-upgrade-all": "^0.3.0"
-	},
-	"scripts": {
-		"build": "webpack --progress --color",
-		"build:watch": "yarn build --watch",
-		"release": "yarn build -p",
-		"test": "node -r babel-register test/index.js",
-		"upgrade": "yarn-upgrade-all"
-	}
+    "name": "markdown-it-charts",
+    "version": "1.0.4",
+    "main": "index.js",
+    "license": "MIT",
+    "author": {
+        "name": "chuyun",
+        "email": "info_together@aliyun.com"
+    },
+    "bin": {
+        "markdown-it-charts": "bin/markdown-it-charts.js"
+    },
+    "files": [
+        "index.js",
+        "bin/",
+        "src/",
+        "dist/"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/chuyun/markdown-it-charts.git"
+    },
+    "bugs": {
+        "url": "https://github.com/tylingsoft/markdown-it-chart/issues"
+    },
+    "homepage": "https://github.com/chuyun/markdown-it-charts",
+    "description": "chart plugin for markdown-it.",
+    "keywords": [
+        "markdown-it",
+        "markdown-it-plugin",
+        "markdown",
+        "charts",
+        "chart",
+        "echarts",
+        "c3"
+    ],
+    "dependencies": {},
+    "devDependencies": {
+        "assert": "^1.4.1",
+        "babel-core": "^6.26.3",
+        "babel-loader": "^7.1.4",
+        "babel-preset-env": "^1.7.0",
+        "markdown-it": "^8.4.1",
+        "webpack": "^4.10.2",
+        "webpack-cli": "^3.0.1",
+        "webpack-node-externals": "^1.7.2",
+        "yarn-upgrade-all": "^0.3.0"
+    },
+    "scripts": {
+        "build": "webpack --progress --color",
+        "build:watch": "yarn build --watch",
+        "release": "yarn build -p",
+        "test": "node -r babel-register test/index.js",
+        "upgrade": "yarn-upgrade-all"
+    }
 }

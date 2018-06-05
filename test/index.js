@@ -1,6 +1,6 @@
-import assert from 'assert'
-import markdownIt from 'markdown-it'
-import markdownItChart from '../bin/index'
+var assert = require('assert');
+var markdownIt = require('markdown-it');
+var markdownItChart = require('../src/index');
 
 const mdi = markdownIt()
 mdi.use(markdownItChart)
@@ -8,7 +8,7 @@ mdi.use(markdownItChart)
 assert(mdi.render('# Hello world').trim() === '<h1>Hello world</h1>', '# Hello world')
 assert(mdi.render('Hello world').trim() === '<p>Hello world</p>', 'Hello world')
 
-console.log(mdi.render(`\`\`\`highcharts
+console.log(mdi.render(`\`\`\`echarts
 {
   "type": "pie",
   "data": {
@@ -41,7 +41,7 @@ console.log(mdi.render(`\`\`\`highcharts
 }
 \`\`\``))
 
-assert(mdi.render(`\`\`\`highcharts
+assert(mdi.render(`\`\`\`chart
 {
   "type": "pie",
   "data": {

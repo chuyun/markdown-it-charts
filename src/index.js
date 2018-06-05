@@ -1,28 +1,47 @@
 const ChartsPlugin = (md) => {
-	const temp = md.renderer.rules.fence.bind(md.renderer.rules)
-	md.renderer.rules.fence = (tokens, idx, options, env, slf) => {
-		const token = tokens[idx];
-		const code = token.content.trim();
-		try {
-			const json = JSON.parse(code);
-			switch (token.info) {
-				case "chart":
-					return `<canvas class="chartjs">${JSON.stringify(json)}</canvas>`;
-					break;
-				case "echarts":
-					return `<div class="echarts"><div class="echarts-data">${JSON.stringify(json)}</div></div>`
-					break;
-				case 'highcharts':
-					return `<div class="highcharts"><div class="highcharts-data">${JSON.stringify(json)}</div></div>`
-					break;
-				default:
-					break;
-			}
-		} catch (err) {
-			return `<pre>${err}</pre>`
-		}
-		return temp(tokens, idx, options, env, slf)
-	}
+    const temp = md
+        .renderer
+        .rules
+        .fence
+        .bind(md.renderer.rules);
+    md.renderer.rules.fence = (tokens, idx, options, env, slf) => {
+        const token = tokens[idx];
+        const code = token
+            .content
+            .trim();
+        try {
+            const json = JSON.parse(code);
+            switch (token.info) {
+                case "chart":
+                    return `<canvas class="chartjs">${JSON.stringify(json)}</canvas>`;
+                    break;
+                case "echarts":
+                    return `<div class="echarts"></div><div class="echarts-data" style='display:none'>${JSON.stringify(json)}</div>`
+                    break;
+                case 'highcharts':
+                    return `<div class="highcharts"><div class="highcharts-data" style='display:none'>${JSON.stringify(json)}</div></div>`
+                    break;
+                case 'chartist':
+                    return `<div class='ct-chart ct-golden-section'></div><div class='chartist-data' style='display:none'>${JSON.stringify(json)}</div>`
+                    break;
+                case 'c3':
+                    return `<div class='c3-chart' id=${json
+                        .id}></div><div class='c3-data' style='display:none'>${JSON
+                        .stringify(json)}</div>`
+                    break;
+                case 'taucharts':
+                    return `<div class='taucharts' id=${json
+                        .id}></div><div class='taucharts-data' style='display:none'>${JSON
+                        .stringify(json)}</div>`
+                    break;
+                default:
+                    break;
+            }
+        } catch (err) {
+            return `<pre>${err}</pre>`
+        }
+        return temp(tokens, idx, options, env, slf)
+    }
 }
 
 module.exports = ChartsPlugin;
