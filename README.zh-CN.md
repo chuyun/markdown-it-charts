@@ -330,12 +330,12 @@ md.render(`\`\`\`taucharts
 **前端使用示例**
 
 ```javascript
-<link href="https://cdn.bootcss.com/tauCharts/1.2.1/tauCharts.default.min.css" rel="stylesheet">
+<link href="http://cdn.jsdelivr.net/npm/taucharts@2/dist/taucharts.min.css" rel="stylesheet">
 <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/d3js/latest/d3.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/taucharts@2/dist/taucharts.min.js"></script>
 // taucharts.js 依赖 d3.js
-// D3.js V4 版本 与 最新版本 taucharts.js 存在部分问题，修复请看taucharts官方文档
+// 最新版本 taucharts.js 依赖 D3.js V4 版本，请看taucharts官方文档
 <script>
   $(function(){
         var reg = /^[\'\"]+|[\'\"]+$/g

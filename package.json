@@ -1,6 +1,6 @@
 {
     "name": "markdown-it-charts",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "main": "index.js",
     "license": "MIT",
     "author": {

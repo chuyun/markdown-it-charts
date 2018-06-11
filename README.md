@@ -329,12 +329,12 @@ md.render(`\`\`\`taucharts
 **Browser**
 
 ```javascript
-<link href="https://cdn.bootcss.com/tauCharts/1.2.1/tauCharts.default.min.css" rel="stylesheet">
+<link href="http://cdn.jsdelivr.net/npm/taucharts@2/dist/taucharts.min.css" rel="stylesheet">
 <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/d3js/latest/d3.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/taucharts@2/dist/taucharts.min.js"></script>
 // taucharts.js is rely on d3.js
-// But there is an incompatibility issue caused by version D3.js
+// the latest taucharts.js is rely on D3.js V4. please see the documents of taucharts.js.
 <script>
   $(function(){
         var reg = /^[\'\"]+|[\'\"]+$/g
